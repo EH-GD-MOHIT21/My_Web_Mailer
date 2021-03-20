@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mail Sender | Anonymous</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="contaner">
+            <div class="div1">
+                <h1>Mail Sender Apk</h1>
+                <p>Send Anonymous Mail to AnyOne</p>
+            </div>
+        </div>
+        <div class="contaner1">
+            <div>
+                <form method="GET" action="sendmail">
+                {% csrf_token %}
+                    <p> <label>From :<input type="email" name="given_name" required disabled class="from_mail" placeholder="no.reply.python.py@gmail.com" /></label>
+                    </p>
+
+                    <p> <label>To : <input type="email" name="to_mail" required placeholder="yourmail@host.service" /></label>
+                    </p>
+                    <p> <label>Subject : <input type="text" name="subject" placeholder="Subject Of Mail" required /> </label>
+                    </p>
+                    <p>Message : <textarea name="mess_age" id="" cols="30" rows="10" required placeholder="Your Body of Mail"></textarea>
+                    </p>
+                    <p><button type="submit">Send</button></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Designed By Mohit &copy; All Rights Reserved
+    </footer>
+</body>
+
+</html>
