@@ -9,7 +9,7 @@ def home(request):
 
 def mailer(to,subject,content,sender_mail=None):
     sender_mail = "no.reply.python.py@gmail.com"   
-    password_sender = "qwerty@123"
+    password_sender = "_-_-_-"
 
     message = EmailMessage()
     message['To'] = to
